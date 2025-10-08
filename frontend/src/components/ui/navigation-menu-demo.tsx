@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { CircleHelpIcon, CircleIcon } from "lucide-react"
-import { ModeToggle } from "@/components/ui/mode-toggle"
-import Logo from "@/assets/logo1.png"
-import { Button } from "@/components/ui/button"
-
+import * as React from "react";
+import { CircleHelpIcon, CircleIcon } from "lucide-react";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import Logo from "@/assets/logo1.png";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,40 +14,51 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { Link } from "react-scroll"
+} from "@/components/ui/navigation-menu";
+import { Link } from "react-scroll";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuPortal,
+} from "@/components/ui/dropdown-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Online Courses",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "Belajar Melalui Vidio yang menarik dan interaktif.",
+    description: "Belajar Melalui Vidio yang menarik dan interaktif.",
   },
   {
     title: "Bootcamp",
     href: "/docs/primitives/hover-card",
-    description:
-      "Belajar Secara Intensif dengan mentor berpengalaman.",
+    description: "Belajar Secara Intensif dengan mentor berpengalaman.",
   },
- 
-]
+];
 
 function NavigationMenuDemo() {
   return (
-    <NavigationMenu viewport={false} >
+    <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
-            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link to="home" smooth={true}
-            duration={500} offset={-70} >Beranda</Link>
-            </NavigationMenuLink>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link to="home" smooth={true} duration={500} offset={-70}>
+              Beranda
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link to="about" smooth={true}
-            duration={500} offset={-70}>Tentang Kami</Link>
-            </NavigationMenuLink>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link to="about" smooth={true} duration={500} offset={-70}>
+              Tentang Kami
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Program</NavigationMenuTrigger>
@@ -71,8 +82,13 @@ function NavigationMenuDemo() {
             <ul className="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link to="comunity" className="flex-row items-center gap-2" smooth={true}
-            duration={500} offset={-70}>
+                  <Link
+                    to="comunity"
+                    className="flex-row items-center gap-2"
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                  >
                     <CircleHelpIcon />
                     WhatsApp
                   </Link>
@@ -83,7 +99,6 @@ function NavigationMenuDemo() {
                     Instagram
                   </Link>
                 </NavigationMenuLink>
-                
               </li>
             </ul>
           </NavigationMenuContent>
@@ -95,7 +110,7 @@ function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 function ListItem({
@@ -115,25 +130,96 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
 
 export default function Header() {
+  const [open, setOpen] = React.useState(false);
   return (
     <header className="fixed z-50 flex h-20 w-full items-center px-6 bg-background">
       <div className="mr-auto">
-        <Link to="/">
-          <img src={Logo} alt="Logo" className="h-10 w-auto color:transparent"/>
-        </Link>
+        <img src={Logo} alt="Logo" className="h-60 w-auto color:transparent" />
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2">
-        <NavigationMenuDemo  />
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
+        <NavigationMenuDemo />
       </div>
       <div className="ml-auto gap-2 flex">
-        <Button variant="outline">Daftar</Button>
-        <Button>Masuk</Button>
         <ModeToggle />
+        <div className="md:hidden">
+          <DropdownMenu onOpenChange={setOpen}>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                {open ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </Button>
+            </DropdownMenuTrigger>
+
+            <DropdownMenuContent
+              align="start"
+              className="md : w-[14rem] px-4 my-2"
+            >
+              <DropdownMenuLabel>
+                <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+                  Menu
+                </h4>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <a href="/">Beranda</a>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <a href="/">Tentang Kami</a>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    Program
+                  </h4>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem>Online Course</DropdownMenuItem>
+                    <DropdownMenuItem>Botcamp</DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>More...</DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+              </DropdownMenuSub>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <a href="/">Komunitas</a>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <a href="/">Atikel</a>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <a href="/">Kontak</a>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild className="my-2">
+                <Button variant="ghost" className="w-full">
+                  Daftar
+                </Button>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="my-2">
+                <Button className="w-full">Masuk</Button>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </header>
-  )
+  );
 }
