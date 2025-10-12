@@ -21,11 +21,13 @@ export default function Home() {
         className="relative mt-20 w-screen h-[90vh] max-h-[1080px]"
       >
         <div className="container relative mx-auto flex h-full items-center justify-center px-4 sm:px-0">
-          <div className="flex flex-col items-center md:gap-4">
-            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance mb-4">
-              Belajar <span className="text-primary">Saham, </span> <br></br>{" "}
-              Capai Tujuan Keuangan Bersama{" "}
-              <span className="text-primary">Folk</span>
+          <div className="flex flex-col items-center md:gap-4 mx-4">
+            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance md:text-6xl">
+              Belajar <span className="text-primary">Saham,</span>
+            </h1>
+            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance mb-4 md:text-6xl">
+              Capai Tujuan Keuangan Bersama
+              <span className="text-primary"> Folk</span>
             </h1>
             <p className="leading-7 [&:not(:first-child)]:mt-6 text-lg text-center lg:text-xl">
               Folk bukan hanya soal investasi, tapi soal membangun pemahaman
