@@ -15,7 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-scroll";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,6 +27,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuPortal,
 } from "@/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -48,16 +48,12 @@ function NavigationMenuDemo() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="home" smooth={true} duration={500} offset={-70}>
-              Beranda
-            </Link>
+            <Link to="home">Beranda</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="about" smooth={true} duration={500} offset={-70}>
-              Tentang Kami
-            </Link>
+            <Link to="about">Tentang Kami</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -82,13 +78,7 @@ function NavigationMenuDemo() {
             <ul className="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link
-                    to="comunity"
-                    className="flex-row items-center gap-2"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                  >
+                  <Link to="comunity" className="flex-row items-center gap-2">
                     <CircleHelpIcon />
                     WhatsApp
                   </Link>
@@ -169,12 +159,12 @@ export default function Header() {
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  <a href="/">Beranda</a>
+                  <Link to="/">Beranda</Link>
                 </h4>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  <a href="/">Tentang Kami</a>
+                  <Link to="/about">Tentang Kami</Link>
                 </h4>
               </DropdownMenuItem>
               <DropdownMenuSub>
@@ -185,23 +175,30 @@ export default function Header() {
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
                   <DropdownMenuSubContent>
-                    <DropdownMenuItem>Online Course</DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link to="/course">Online Course</Link>
+                    </DropdownMenuItem>
                     <DropdownMenuItem>Botcamp</DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>More...</DropdownMenuItem>
                   </DropdownMenuSubContent>
                 </DropdownMenuPortal>
               </DropdownMenuSub>
-              <DropdownMenuItem asChild>
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  <a href="/">Komunitas</a>
-                </h4>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  <a href="/">Atikel</a>
-                </h4>
-              </DropdownMenuItem>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    Komunitas
+                  </h4>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem>
+                      <Link to="/comunity">Saham Folks Discord</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>Blog</DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+              </DropdownMenuSub>
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   <a href="/">Kontak</a>
