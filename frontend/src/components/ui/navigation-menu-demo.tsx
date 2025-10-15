@@ -201,13 +201,13 @@ export default function Header() {
               </DropdownMenuSub>
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  <a href="/">Kontak</a>
+                  <Link to="/contact">Kontak</Link>
                 </h4>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild className="my-2">
                 <Button variant="ghost" className="w-full">
-                  Daftar
+                  <Link to="/register">Daftar</Link>
                 </Button>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="my-2">
