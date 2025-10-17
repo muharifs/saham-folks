@@ -195,7 +195,9 @@ export default function Header() {
                     <DropdownMenuItem>
                       <Link to="/comunity">Saham Folks Discord</Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>Blog</DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link to="/blog">Blog</Link>
+                    </DropdownMenuItem>
                   </DropdownMenuSubContent>
                 </DropdownMenuPortal>
               </DropdownMenuSub>
