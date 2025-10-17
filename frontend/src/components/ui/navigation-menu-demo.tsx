@@ -207,11 +207,13 @@ export default function Header() {
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild className="my-2">
                 <Button variant="ghost" className="w-full">
-                  <Link to="/register">Daftar</Link>
+                  <Link to="/auth/register">Daftar</Link>
                 </Button>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="my-2">
-                <Button className="w-full">Masuk</Button>
+                <Button className="w-full">
+                  <Link to="/auth/login">Masuk</Link>
+                </Button>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

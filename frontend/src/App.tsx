@@ -10,6 +10,7 @@ import Course from "./components/pages/course.tsx";
 import Product from "./components/pages/product.tsx";
 import Contact from "./components/pages/contact.tsx";
 import SignupPage from "./components/pages/register.tsx";
+import LoginPage from "./components/pages/login-form.tsx";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
           <Route element={<AuthLayout />}>
-            <Route path="/register" element={<SignupPage />} />
+            <Route path="/auth/register" element={<SignupPage />} />
+            <Route path="/auth/login" element={<LoginPage />} />
           </Route>
         </Routes>
       </ThemeProvider>

@@ -1,6 +1,6 @@
 import Logo from "@/assets/logo1.svg";
 import { Instagram, Facebook, Youtube } from "lucide-react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -32,15 +32,14 @@ export function Footer() {
               <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                 Program
               </h4>
-              <Link to="/a">Online Courses</Link>
+              <Link to="/course">Online Courses</Link>
               <Link to="/v">Bootcamp</Link>
-              <a href="/s">tes</a>
             </div>
             <div className="flex w-2/5 flex-col gap-4 md:w-1/3">
               <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                 Company
               </h4>
-              <Link to="/a">Tentang Kami</Link>
+              <Link to="/about">Tentang Kami</Link>
               <Link to="/a">Blog</Link>
               <Link to="/a">Komunitas</Link>
             </div>
@@ -48,7 +47,7 @@ export function Footer() {
               <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                 Support
               </h4>
-              <Link to="/s">Hubungi Kami</Link>
+              <Link to="/contact">Hubungi Kami</Link>
               <Link to="/s">Syarat dan Ketentuan</Link>
               <Link to="/s">Kebijakan Privasi</Link>
             </div>
