@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { FcGoogle } from "react-icons/fc";
 import {
   Field,
   FieldDescription,
@@ -90,6 +91,7 @@ export function SignupForm({
         <FieldSeparator>Atau Lanjutkan dengan Akun</FieldSeparator>
         <Field>
           <Button variant="outline" type="button">
+            <FcGoogle />
             Daftar dengan Google
           </Button>
           <FieldDescription className="px-6 text-center">

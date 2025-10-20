@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Logo from "@/assets/logo1.png";
+import { FcGoogle } from "react-icons/fc";
 import {
   Field,
   FieldDescription,
@@ -60,6 +61,7 @@ function LoginForm({ className, ...props }: React.ComponentProps<"form">) {
         <FieldSeparator>Atau Lanjutkan dengan Akun</FieldSeparator>
         <Field>
           <Button variant="outline" type="button">
+            <FcGoogle />
             Masuk dengan Google
           </Button>
           <FieldDescription className="text-center">

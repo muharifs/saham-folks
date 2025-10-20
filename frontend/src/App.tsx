@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 import MainLayout from "@/components/layouts/MainLayout.tsx";
@@ -13,11 +14,25 @@ import SignupPage from "./components/pages/register.tsx";
 import LoginPage from "./components/pages/login-form.tsx";
 import BlogPage from "./components/pages/blog.tsx";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
       <ThemeProvider defaultTheme="light" storageKey="my-app-theme">
         <Routes>
+          {ScrollToTop()}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
