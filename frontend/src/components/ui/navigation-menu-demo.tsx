@@ -1,7 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { CircleHelpIcon, CircleIcon } from "lucide-react";
+import {
+  CircleHelpIcon,
+  CircleIcon,
+  Video,
+  Notebook,
+  Newspaper,
+} from "lucide-react";
+import { FaDiscord } from "react-icons/fa";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Logo from "@/assets/logo1.png";
 import { Button } from "@/components/ui/button";
@@ -176,9 +183,13 @@ export default function Header() {
                 <DropdownMenuPortal>
                   <DropdownMenuSubContent>
                     <DropdownMenuItem>
+                      <Video className="text-primary" />
                       <Link to="/course">Online Course</Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>Botcamp</DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Notebook />
+                      Botcamp
+                    </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>More...</DropdownMenuItem>
                   </DropdownMenuSubContent>
@@ -193,9 +204,11 @@ export default function Header() {
                 <DropdownMenuPortal>
                   <DropdownMenuSubContent>
                     <DropdownMenuItem>
+                      <FaDiscord />
                       <Link to="/comunity">Saham Folks Discord</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
+                      <Newspaper />
                       <Link to="/blog">Blog</Link>
                     </DropdownMenuItem>
                   </DropdownMenuSubContent>

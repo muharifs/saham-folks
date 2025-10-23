@@ -12,6 +12,7 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { UserRoundCog, UsersRound, FileVideoCamera } from "lucide-react";
+import { FaDiscord } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -172,6 +173,7 @@ export default function Home() {
             </div>
           </div>
           <Button size="lg" className="mt-5 font-semibold">
+            <FaDiscord />
             Join Komunitas Discord
           </Button>
         </div>

@@ -1,4 +1,4 @@
-import Logo from "@/assets/logo1.svg";
+import Logo from "@/assets/logolight.png";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ export function Footer() {
           <img
             src={Logo}
             alt="Logo"
-            className="w-30 object-cover object-center color:transparent"
+            className="px-2 my-5 w-50 object-cover object-center color:transparent"
           />
           <p className="px-2 text-sm text-left">
             Saham Folks adalah platform edukasi investasi terdepan untuk
@@ -40,7 +40,7 @@ export function Footer() {
                 Company
               </h4>
               <Link to="/about">Tentang Kami</Link>
-              <Link to="/a">Blog</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/a">Komunitas</Link>
             </div>
             <div className="flex w-2/5 flex-col gap-4 md:w-1/3">
@@ -52,11 +52,11 @@ export function Footer() {
               <Link to="/s">Kebijakan Privasi</Link>
             </div>
           </div>
-        </div>
-        <div className="flex flex-row border-t pt-4 mt-10 h-20">
-          <p className="leading-7 [&:not(:first-child)]:mx-auto w-full align-content-center">
-            &copy; 2025 Saham Folks. Semua Hak Dilindungi.
-          </p>
+          <div className="flex flex-row border-t pt-4 mt-10 h-20">
+            <p className="leading-7 [&:not(:first-child)]:mx-auto w-full align-content-center">
+              &copy; 2025 Saham Folks. Semua Hak Dilindungi.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
