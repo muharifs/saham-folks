@@ -16,10 +16,10 @@ export default function Course() {
   return (
     <section
       id="course"
-      className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center"
+      className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center md:px-8"
     >
       <div className="flex-1 md:min-h-min mx-3 py-10">
-        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 justify-center text-left w-full text-primary">
+        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 justify-center text-left w-full text-primary md:text-4xl">
           Course Saham Folks
         </h2>
         <p className="text-muted-foreground text-md text-center mt-3 text-left">

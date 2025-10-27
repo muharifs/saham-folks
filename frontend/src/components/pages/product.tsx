@@ -77,7 +77,7 @@ export default function Course() {
   return (
     <section
       id="product"
-      className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center"
+      className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center md:px-6"
     >
       <div className="flex-1 md:min-h-min mx-3 py-10">
         <AspectRatio ratio={4 / 3}>

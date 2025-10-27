@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export function Footer() {
   return (
     <footer className="bg-primary py-6 mt-10 text-white">
-      <div className="container mx-auto px-4 sm:px-0 text-center">
+      <div className="container mx-auto px-4 sm:px-0 text-center md:px-5">
         <div className=" flex flex-col mx-5 gap-y-2">
           <img
             src={Logo}
@@ -27,7 +27,7 @@ export function Footer() {
               <Youtube />
             </div>
           </div>
-          <div className="flex flex-wrap w-full gap-2 mx-2 my-2 text-left">
+          <div className="flex flex-wrap w-full gap-2 mx-2 my-2 text-left md:flex-nowrap">
             <div className="flex w-2/5 flex-col gap-4 md:w-1/3">
               <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
                 Program

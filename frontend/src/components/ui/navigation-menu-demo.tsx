@@ -137,12 +137,12 @@ export default function Header() {
       <div className="mr-auto">
         <img src={Logo} alt="Logo" className="h-60 w-auto color:transparent" />
       </div>
-      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
+      <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
         <NavigationMenuDemo />
       </div>
       <div className="ml-auto gap-2 flex">
         <ModeToggle />
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <DropdownMenu onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">

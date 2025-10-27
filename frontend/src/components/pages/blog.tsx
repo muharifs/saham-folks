@@ -22,7 +22,7 @@ import {
 export default function BlogPage() {
   return (
     <>
-      <section className="relative mt-20 w-screen h-[70vh] max-h-[1080px]">
+      <section className="relative mt-20 w-screen h-[70vh] max-h-[1080px] md:flex">
         <Card className="mx-5 pt-0">
           <CardHeader className="px-0">
             <AspectRatio ratio={4 / 3} className="bg-muted">
