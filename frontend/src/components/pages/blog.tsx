@@ -22,8 +22,8 @@ import {
 export default function BlogPage() {
   return (
     <>
-      <section className="relative mt-20 w-screen h-[70vh] max-h-[1080px] md:flex">
-        <Card className="mx-5 pt-0">
+      <section className="flex flex-col mx-5 gap-6 md:mx-15">
+        <Card className="mx-5 pt-0 mt-20 mb-10 md:mx-10">
           <CardHeader className="px-0">
             <AspectRatio ratio={4 / 3} className="bg-muted">
               <img
@@ -56,8 +56,6 @@ export default function BlogPage() {
             </Button>
           </CardFooter>
         </Card>
-      </section>
-      <section className="flex flex-col mx-5 gap-6">
         <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-primary">
           Semua Artikel
         </h2>

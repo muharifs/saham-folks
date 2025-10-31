@@ -35,7 +35,7 @@ export default function Course() {
             Konsultasi Gratis
           </Button>
         </div>
-        <div className="flex flex-col my-5 gap-6">
+        <div className="flex flex-col my-5 gap-6 lg:grid lg:grid-cols-3">
           <Card
             onClick={go}
             role="button"
@@ -56,7 +56,7 @@ export default function Course() {
             </CardContent>
             <CardFooter className="flex flex-col items-start">
               <CardTitle>
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary">
+                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary lg:text-xl">
                   Pahami Saham, Bangun Portofolio: Kursus Investasi dari Dasar
                   hingga Lanjutan
                 </h3>
@@ -78,7 +78,7 @@ export default function Course() {
             </CardContent>
             <CardFooter className="flex flex-col items-start">
               <CardTitle>
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary">
+                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary lg:text-xl">
                   Mengenal Dunia Saham: Dari Pemula hingga Ahli Investasi
                 </h3>
               </CardTitle>
@@ -99,7 +99,7 @@ export default function Course() {
             </CardContent>
             <CardFooter className="flex flex-col items-start">
               <CardTitle>
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary">
+                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary lg:text-xl">
                   Investasi Cerdas: Menguasai Saham, Obligasi, dan Instrumen
                   Keuangan Lainnya
                 </h3>

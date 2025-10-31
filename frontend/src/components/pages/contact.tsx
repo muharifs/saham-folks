@@ -13,11 +13,14 @@ export default function Contact() {
       className="container flex w-full flex-col mx-auto my-20 px-10 sm:px-0 gap-16"
     >
       <div className="w-full lg:w-1/2">
-        <AspectRatio className="mx-auto my-5 px-10" ratio={4 / 3}>
+        <AspectRatio
+          className="mx-auto my-5 px-10 md:flex md:items-center md:max-w-screen-sm"
+          ratio={4 / 3}
+        >
           <img src={Banner} alt="Image" className="rounded-md object-cover" />
         </AspectRatio>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/2 md:px-10">
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 w-full text-primary my-2">
           Kontak Kami
         </h2>

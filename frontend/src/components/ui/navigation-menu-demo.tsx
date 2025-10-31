@@ -1,13 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  CircleHelpIcon,
-  CircleIcon,
-  Video,
-  Notebook,
-  Newspaper,
-} from "lucide-react";
+import { Video, Notebook, Newspaper } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Logo from "@/assets/logo1.png";
@@ -39,12 +33,12 @@ import { Link } from "react-router-dom";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Online Courses",
-    href: "/docs/primitives/alert-dialog",
+    href: "/course",
     description: "Belajar Melalui Vidio yang menarik dan interaktif.",
   },
   {
     title: "Bootcamp",
-    href: "/docs/primitives/hover-card",
+    href: "/",
     description: "Belajar Secara Intensif dengan mentor berpengalaman.",
   },
 ];
@@ -55,12 +49,12 @@ function NavigationMenuDemo() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="home">Beranda</Link>
+            <Link to="/">Beranda</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="about">Tentang Kami</Link>
+            <Link to="/about">Tentang Kami</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -86,14 +80,14 @@ function NavigationMenuDemo() {
               <li>
                 <NavigationMenuLink asChild>
                   <Link to="comunity" className="flex-row items-center gap-2">
-                    <CircleHelpIcon />
-                    WhatsApp
+                    <Video className="text-primary" />
+                    Saham Folks Discord
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link to="#" className="flex-row items-center gap-2">
-                    <CircleIcon />
-                    Instagram
+                  <Link to="/blog" className="flex-row items-center gap-2">
+                    <Newspaper />
+                    Blog
                   </Link>
                 </NavigationMenuLink>
               </li>
@@ -102,7 +96,7 @@ function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="/docs">Kontak</Link>
+            <Link to="/contact">Kontak</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

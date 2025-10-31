@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export default function About() {
   return (
     <section id="about" className="container mx-auto my-10 px-4 sm:px-0 gap-16">
-      <div className="bg-muted/50 flex-1 rounded-xl md:min-h-min px-10 py-10">
+      <div className="bg-muted/50 flex-1 rounded-xl mx-auto px-10 py-10 md:mx-10 mt-25 md:mb-10">
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 w-full text-primary">
           Tentang Saham Folks
         </h2>
@@ -23,7 +23,7 @@ export default function About() {
       <AspectRatio className="mx-auto my-5 px-10" ratio={4 / 3}>
         <img src={Banner} alt="Image" className="rounded-md object-cover" />
       </AspectRatio>
-      <div className="flex flex-col mx-auto my-7 px-10 gap-y-5">
+      <div className="flex flex-col mx-auto my-7 px-5 gap-y-5 md:px-10">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           Misi Kami
         </h3>

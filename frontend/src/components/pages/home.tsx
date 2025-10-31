@@ -34,7 +34,7 @@ export default function Home() {
               Folk bukan hanya soal investasi, tapi soal membangun pemahaman
               yang kuat dan keputusan yang bijak.
             </p>
-            <Button size="lg" className="mt-5 font-semibold ">
+            <Button size="lg" className="mt-5 font-semibold">
               Belajar Sekarang
             </Button>
           </div>
@@ -124,7 +124,7 @@ export default function Home() {
         id="comunity"
         className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center flex text-center md:gap-5"
       >
-        <div className="md:flex md:flex-row md:mx-10">
+        <div className="md:flex md:flex-row md:mx-10 lg:w-full">
           <div className="hidden w-full md-basis-[50%] md:flex md:items-center">
             <AspectRatio ratio={5 / 4}>
               <img
