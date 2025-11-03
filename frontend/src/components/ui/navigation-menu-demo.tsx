@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Video, Notebook, Newspaper } from "lucide-react";
 import { FaDiscord } from "react-icons/fa";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import Logo from "@/assets/logo1.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -30,16 +29,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: {
+  title: string;
+  href: string;
+  description: string;
+  iconsnav: React.ElementType;
+}[] = [
   {
     title: "Online Courses",
     href: "/course",
     description: "Belajar Melalui Vidio yang menarik dan interaktif.",
+    iconsnav: Notebook,
   },
   {
     title: "Bootcamp",
     href: "/",
     description: "Belajar Secara Intensif dengan mentor berpengalaman.",
+    iconsnav: Video,
   },
 ];
 
@@ -66,6 +72,7 @@ function NavigationMenuDemo() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  iconsnav={component.iconsnav}
                 >
                   {component.description}
                 </ListItem>
@@ -80,7 +87,7 @@ function NavigationMenuDemo() {
               <li>
                 <NavigationMenuLink asChild>
                   <Link to="comunity" className="flex-row items-center gap-2">
-                    <Video className="text-primary" />
+                    <FaDiscord />
                     Saham Folks Discord
                   </Link>
                 </NavigationMenuLink>
@@ -108,16 +115,27 @@ function ListItem({
   title,
   children,
   href,
+  iconsnav: Icon,
   ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+}: React.ComponentPropsWithoutRef<"li"> & {
+  href: string;
+  iconsnav?: React.ElementType;
+}) {
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link to={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
+        <Link to={href} className="flex flex-row items-left gap-3 w-full">
+          <div className="flex items-start gap-3 p-3 hover:bg-accent rounded-lg transition-colors">
+            {Icon ? (
+              <Icon className="h-12 w-12 text-primary mb-2 size-14" />
+            ) : null}
+            <div className="flex flex-col">
+              <div className="text-sm font-medium">{title}</div>
+              <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                {children}
+              </p>
+            </div>
+          </div>
         </Link>
       </NavigationMenuLink>
     </li>
@@ -134,8 +152,13 @@ export default function Header() {
       <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
         <NavigationMenuDemo />
       </div>
-      <div className="ml-auto gap-2 flex">
-        <ModeToggle />
+      <div className="ml-auto gap-2 flex lg:gap-4">
+        <Button size="lg" variant="outline" className="hidden lg:inline-flex">
+          <Link to="/auth/register">Daftar</Link>
+        </Button>
+        <Button size="lg" className="hidden lg:inline-flex">
+          <Link to="/auth/login">Masuk</Link>
+        </Button>
         <div className="lg:hidden">
           <DropdownMenu onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>

@@ -1,5 +1,5 @@
 import Logo from "@/assets/logolight.png";
-import { Instagram, Facebook, Youtube } from "lucide-react";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -16,16 +16,13 @@ export function Footer() {
             Saham Folks adalah platform edukasi investasi terdepan untuk
             investor pemula di Indonesia.
           </p>
-          <div className="flex flex-row mx-2 my-2 gap-4 ">
-            <div className="px-2 py-2 bg-ring rounded-lg">
-              <Instagram />
-            </div>
-            <div className="px-2 py-2 bg-ring rounded-lg">
-              <Facebook />
-            </div>
-            <div className="px-2 py-2 bg-ring rounded-lg">
-              <Youtube />
-            </div>
+          <div className="flex flex-row mx-2 my-2 gap-4">
+            <Link to="/">
+              <FaInstagram className="size-8" />
+            </Link>
+            <Link to="/">
+              <FaYoutube className="size-8" />
+            </Link>
           </div>
           <div className="flex flex-wrap w-full gap-2 mx-2 my-2 text-left md:flex-nowrap">
             <div className="flex w-2/5 flex-col gap-4 md:w-1/3">

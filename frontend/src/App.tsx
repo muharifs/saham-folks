@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { ThemeProvider } from "@/components/ui/theme-provider";
-
 import MainLayout from "@/components/layouts/MainLayout.tsx";
 import AuthLayout from "@/components/layouts/AuthLayout.tsx";
 
@@ -30,23 +28,21 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      <ThemeProvider defaultTheme="light" storageKey="my-app-theme">
-        <Routes>
-          {ScrollToTop()}
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/course" element={<Course />} />
-            <Route path="/course/123" element={<Product />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<BlogPage />} />
-          </Route>
-          <Route element={<AuthLayout />}>
-            <Route path="/auth/register" element={<SignupPage />} />
-            <Route path="/auth/login" element={<LoginPage />} />
-          </Route>
-        </Routes>
-      </ThemeProvider>
+      <Routes>
+        {ScrollToTop()}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/course/123" element={<Product />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<BlogPage />} />
+        </Route>
+        <Route element={<AuthLayout />}>
+          <Route path="/auth/register" element={<SignupPage />} />
+          <Route path="/auth/login" element={<LoginPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }

@@ -10,17 +10,17 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="container flex w-full flex-col mx-auto my-20 px-10 sm:px-0 gap-16"
+      className="container flex w-full flex-col mx-auto my-20 px-10 sm:px-0 gap-16 lg:flex-row-reverse lg:gap-5"
     >
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-3/5">
         <AspectRatio
-          className="mx-auto my-5 px-10 md:flex md:items-center md:max-w-screen-sm"
+          className="mx-auto my-5 px-10 md:flex md:items-center md:max-w-screen-sm lg:max-w-screen-md"
           ratio={4 / 3}
         >
           <img src={Banner} alt="Image" className="rounded-md object-cover" />
         </AspectRatio>
       </div>
-      <div className="w-full lg:w-1/2 md:px-10">
+      <div className="w-full lg:w-2/5 md:px-10 lg:px-15 lg:py-10">
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 w-full text-primary my-2">
           Kontak Kami
         </h2>

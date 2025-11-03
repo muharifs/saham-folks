@@ -80,8 +80,8 @@ export default function Course() {
       className="container mx-auto my-10 px-4 sm:px-0 gap-16 items-center md:px-6"
     >
       <div className="flex-1 md:min-h-min mx-3 py-10">
-        <AspectRatio ratio={4 / 3}>
-          <img src={Banner} alt="Image" className="rounded-md object-cover" />
+        <AspectRatio ratio={4 / 3} className="lg:flex py-10">
+          <img src={Banner} alt="Image" className="rounded-md object-cover " />
         </AspectRatio>
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 justify-center text-left w-full text-primary">
           Pahami Saham, Bangun Portofolio: Kursus Investasi dari Dasar hingga
