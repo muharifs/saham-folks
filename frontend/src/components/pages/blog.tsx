@@ -22,14 +22,17 @@ import {
 export default function BlogPage() {
   return (
     <>
-      <section className="flex flex-col mx-5 gap-6 md:mx-15">
-        <div className="flex flex-col my-25 lg:flex-row lg:gap-8 lg:flex-row-reverse">
+      <section
+        id="blog"
+        className="container flex flex-col w-full mx-auto px-5 gap-6 md:px-15"
+      >
+        <div className="flex flex-col my-25 lg:gap-8 lg:flex-row-reverse lg:items-center">
           <img
             src={Banner}
             alt="Image"
-            className="h-full w-full rounded-lg object-cover lg:w-3/5"
+            className="h-auto w-full rounded-lg object-cover lg:w-3/5 lg:max-h-[480px]"
           />
-          <div className="flex flex-col px-2 gap-3 lg:w-2/5">
+          <div className="flex flex-col px-2 gap-3 lg:w-2/5 lg:justify-center">
             <CardDescription className="pt-5">
               <code className="relative rounded px-[0.3rem] py-[0.2rem] text-sm font-semibold lg:text-base">
                 Artikel Terbaru

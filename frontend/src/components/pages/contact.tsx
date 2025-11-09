@@ -3,42 +3,78 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { SendHorizontal } from "lucide-react";
-import Banner from "@/assets/cs.jpg";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="container flex w-full flex-col mx-auto my-20 px-10 sm:px-0 gap-16 lg:flex-row-reverse lg:gap-5"
+      className="container mx-auto my-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="w-full lg:w-3/5">
-        <AspectRatio
-          className="mx-auto my-5 px-10 md:flex md:items-center md:max-w-screen-sm lg:max-w-screen-md"
-          ratio={4 / 3}
-        >
-          <img src={Banner} alt="Image" className="rounded-md object-cover" />
-        </AspectRatio>
-      </div>
-      <div className="w-full lg:w-2/5 md:px-10 lg:px-15 lg:py-10">
-        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 w-full text-primary my-2">
-          Kontak Kami
-        </h2>
-        <Field>
-          {/* Input, Select, Switch, etc. */}
-          <div className="grid w-full gap-2">
-            <div className="flex flex-row gap-2">
-              <Input type="name" placeholder="Nama Depan" />
-              <Input type="name" placeholder="Nama Belakang" />
-            </div>
-            <Input type="email" placeholder="Email" />
-            <Textarea className="h-30" placeholder="Tulis pesan anda disini." />
-            <Button>
-              <SendHorizontal />
-              Kirim Pesan
-            </Button>
+      <div className="w-full max-w-4xl mx-auto">
+        <div className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl shadow-md p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8">
+          {/* Left column: headline / description */}
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-primary mb-3">
+              Kontak Kami
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Silakan isi formulir di samping untuk menghubungi tim kami. Kami
+              akan merespons secepatnya.
+            </p>
           </div>
-        </Field>
+
+          {/* Right column: form */}
+          <div className="lg:w-1/2">
+            <Field>
+              <form className="grid w-full gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <label className="flex flex-col">
+                    <span className="text-sm font-medium mb-1">Nama Depan</span>
+                    <Input
+                      type="text"
+                      name="firstName"
+                      placeholder="Nama Depan"
+                    />
+                  </label>
+                  <label className="flex flex-col">
+                    <span className="text-sm font-medium mb-1">
+                      Nama Belakang
+                    </span>
+                    <Input
+                      type="text"
+                      name="lastName"
+                      placeholder="Nama Belakang"
+                    />
+                  </label>
+                </div>
+
+                <label className="flex flex-col">
+                  <span className="text-sm font-medium mb-1">Email</span>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="email@contoh.com"
+                  />
+                </label>
+
+                <label className="flex flex-col">
+                  <span className="text-sm font-medium mb-1">Pesan</span>
+                  <Textarea
+                    className="min-h-[140px] resize-y"
+                    placeholder="Tulis pesan anda disini."
+                  />
+                </label>
+
+                <div className="pt-2">
+                  <Button className="w-full flex items-center justify-center gap-2">
+                    <SendHorizontal className="h-4 w-4" />
+                    Kirim Pesan
+                  </Button>
+                </div>
+              </form>
+            </Field>
+          </div>
+        </div>
       </div>
     </section>
   );
