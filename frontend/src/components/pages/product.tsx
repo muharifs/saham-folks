@@ -31,7 +31,7 @@ const materiCourse = [
   },
   {
     title: "Analisis Teknikal untuk Pemula",
-    content: ["Pola grafik (chart pattern)", "Indikator teknikal populer"],
+    content: ["Pola gra5fik (chart pattern)", "Indikator teknikal populer"],
   },
   {
     title: "Manajemen Risiko dan Psikologi Investor",
