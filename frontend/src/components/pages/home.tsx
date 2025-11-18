@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Banner from "@/assets/dumy-class-01.jpg";
+import BgHero from "@/assets/bghero.png";
 import Grub from "@/assets/scgrub.jpeg";
 import {
   Card,
@@ -19,28 +20,35 @@ export default function Home() {
     <>
       <section
         id="home"
-        className="relative mt-20 w-screen h-[90vh] max-h-[1080px]"
+        className="relative mt-20 w-screen h-[90vh] max-h-[1080px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${BgHero})` }}
       >
-        <div className="container relative mx-auto flex h-full items-center justify-center px-4 sm:px-0">
+        {/* overlay for better contrast */}
+        <div className="absolute inset-0 bg-muted-foreground/40" aria-hidden />
+        <div className="container relative mx-auto flex h-full items-center justify-center px-4 sm:px-0 z-10">
           <div className="flex flex-col items-center md:gap-4 mx-4">
-            <h1 className="inline-block scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance md:text-6xl">
-              Belajar <span className="text-primary">Saham,</span>
+            <h1 className="inline-block scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance md:text-6xl text-accent">
+              Belajar <span className="text-accent">Saham,</span>
             </h1>
-            <h1 className="scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance mb-4 md:text-6xl">
+            <h1 className="scroll-m-20 text-center text-3xl font-extrabold tracking-tight text-balance mb-4 md:text-6xl text-accent">
               Capai Tujuan Bersama
-              <span className="text-primary"> Folk</span>
+              <span className="text-accent"> Folk</span>
             </h1>
-            <p className="leading-7 [&:not(:first-child)]:mt-6 text-base text-center md:text-xl">
+            <p className="leading-7 [&:not(:first-child)]:mt-6 text-base text-center md:text-xl text-accent">
               Folk bukan hanya soal investasi, tapi soal membangun pemahaman
               yang kuat dan keputusan yang bijak.
             </p>
-            <Button size="lg" className="mt-5 font-semibold">
+            <Button
+              variant="outline"
+              size="lg"
+              className="mt-5 font-semibold text-primary"
+            >
               Belajar Sekarang
             </Button>
           </div>
         </div>
       </section>
-      <section className="container flex flex-col mx-auto my-10 px-10 sm:px-10 lg:flex-row md:px-0 gap-16 items-center md:px-10">
+      <section className="container flex flex-col mx-auto my-10 px-10 sm:px-10 lg:flex-row  gap-16 items-center md:px-10">
         <div className="w-full lg:w-1/2 ">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary">
             Ambil Harga Spesial Sebelum Kehabisan
@@ -84,7 +92,7 @@ export default function Home() {
           <div className="border-b-4 w-30 border-primary mx-auto mb-3" />
           <div className="text-center flex flex-col gap-2 ">
             <div className="md:flex">
-              <UserRoundCog className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg p-2 bg-muted p-3 md:my-5 md:mx-5" />
+              <UserRoundCog className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Mentor Berpengalaman
@@ -95,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex">
-              <UsersRound className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg p-2 bg-muted p-3 md:my-5 md:mx-5" />
+              <UsersRound className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Komunitas Aktif
@@ -106,7 +114,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex">
-              <FileVideoCamera className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg p-2 bg-muted p-3 md:my-5 md:mx-5" />
+              <FileVideoCamera className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Akses Selamanya

@@ -87,7 +87,7 @@ export default function Course() {
           Pahami Saham, Bangun Portofolio: Kursus Investasi dari Dasar hingga
           Lanjutan
         </h2>
-        <p className="text-muted-foreground text-md text-center mt-3 text-left">
+        <p className="text-muted-foreground text-md mt-3 text-left">
           Kursus komprehensif untuk membantu pemula memahami dunia saham dari
           nol hingga mampu membangun portofolio investasi yang menguntungkan dan
           berkelanjutan. Dirancang interaktif dengan studi kasus nyata dan
@@ -103,7 +103,7 @@ export default function Course() {
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-primary">
             Tentang Course
           </h3>
-          <p className="text-muted-foreground text-md text-center mt-3 text-left">
+          <p className="text-muted-foreground text-md mt-3 text-left">
             Kursus “Pahami Saham, Bangun Portofolio: Kursus Investasi dari Dasar
             hingga Lanjutan” dirancang untuk siapa pun yang ingin memulai
             perjalanan investasi dengan pemahaman yang kuat dan terarah. Di
@@ -116,7 +116,7 @@ export default function Course() {
             langkah demi langkah untuk membuat keputusan investasi yang lebih
             cerdas dan terukur.
           </p>
-          <p className="text-muted-foreground text-md text-center mt-3 text-left">
+          <p className="text-muted-foreground text-md mt-3 text-left">
             Selain itu, kursus ini menghadirkan pengalaman belajar yang
             interaktif dengan kombinasi video pembelajaran, kuis, dan simulasi
             pasar saham berbasis data real-time. Peserta akan diajak memahami

@@ -22,7 +22,7 @@ export default function Course() {
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 justify-center text-left w-full text-primary md:text-4xl">
           Course Saham Folks
         </h2>
-        <p className="text-muted-foreground text-md text-center mt-3 text-left">
+        <p className="text-muted-foreground text-md mt-3 text-left">
           Mau mulai investasi saham tapi bingung harus mulai dari mana? Tenang,
           Folks hadir buat bantu kamu! Ikuti online course kami yang mudah
           dipahami, fleksibel, dan langsung dipandu mentor-mentor andal di
