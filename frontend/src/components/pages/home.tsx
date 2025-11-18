@@ -11,9 +11,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { UserRoundCog, UsersRound, FileVideoCamera } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaUserCog } from "react-icons/fa";
+import { FaPeopleGroup, FaUserGroup } from "react-icons/fa6";
+import { BiSolidCameraHome } from "react-icons/bi";
 
 export default function Home() {
   return (
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="border-b-4 w-30 border-primary mx-auto mb-3" />
           <div className="text-center flex flex-col gap-2 ">
             <div className="md:flex">
-              <UserRoundCog className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
+              <FaUserCog className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Mentor Berpengalaman
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex">
-              <UsersRound className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
+              <FaUserGroup className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Komunitas Aktif
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex">
-              <FileVideoCamera className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
+              <BiSolidCameraHome className="mx-auto my-10 w-15 h-15 mb-2 border-3 rounded-lg bg-muted p-3 md:my-5 md:mx-5" />
               <div className="md:flex-col md:w-full md:content-center md:text-left">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   Akses Selamanya
@@ -153,10 +153,7 @@ export default function Home() {
             </p>
             <div className="space-y-4 !mt-8 md:space-y-4 md:!mt-4">
               <div className="flex flex-col gap-2 items-center md:flex-row md:gap-5">
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                <FaPeopleGroup className="size-8" />
                 <div>
                   <small className="text-base leading-none font-medium">
                     Bangun Jaringan
@@ -167,10 +164,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col gap-2 items-center md:flex-row md:gap-5">
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                <FaPeopleGroup className="size-8" />
                 <div>
                   <small className="text-base leading-none font-medium">
                     Kembangkan Skill
@@ -181,10 +175,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col gap-2 items-center md:flex-row md:gap-5">
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                <FaPeopleGroup className="size-8" />
                 <div>
                   <small className="text-base leading-none font-medium">
                     Dapat Dukungan & Mentor
