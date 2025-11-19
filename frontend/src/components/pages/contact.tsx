@@ -13,7 +13,7 @@ export default function Contact() {
       <div className="w-full max-w-4xl mx-auto">
         <div className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl shadow-md p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8">
           {/* Left column: headline / description */}
-          <div className="lg:w-1/2 flex flex-col justify-center">
+          <div className="lg:w-1/2 flex flex-col">
             <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-primary mb-3">
               Kontak Kami
             </h2>

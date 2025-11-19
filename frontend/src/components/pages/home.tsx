@@ -14,8 +14,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FaDiscord, FaUserCog } from "react-icons/fa";
 import { FaPeopleGroup, FaUserGroup } from "react-icons/fa6";
 import { BiSolidCameraHome } from "react-icons/bi";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Home() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#comunity") {
+      const el = document.getElementById("comunity");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location]);
   return (
     <>
       <section
