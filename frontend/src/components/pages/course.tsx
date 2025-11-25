@@ -15,7 +15,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Banner from "@/assets/dumy-class-01.jpg";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -25,13 +24,14 @@ export default function Course() {
   const courses = React.useMemo(() => {
     return [
       {
-        id: "c1",
+        id: "123",
         title:
           "Strategi investasi saham:  analisis teknikal dan manajemen risiko",
         price: "Rp. 199.000",
         lessons: 23,
         duration: "1 hr 33 min",
-        image: Banner,
+        image:
+          "https://plus.unsplash.com/premium_photo-1661596686441-611034b8077e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: "c2",
@@ -39,7 +39,8 @@ export default function Course() {
         price: "Rp. 249.000",
         lessons: 18,
         duration: "2 hr 10 min",
-        image: Banner,
+        image:
+          "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: "c3",
@@ -47,7 +48,8 @@ export default function Course() {
         price: "Rp. 179.000",
         lessons: 12,
         duration: "1 hr 5 min",
-        image: Banner,
+        image:
+          "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: "c4",
@@ -55,7 +57,8 @@ export default function Course() {
         price: "Rp. 159.000",
         lessons: 10,
         duration: "0 hr 50 min",
-        image: Banner,
+        image:
+          "https://plus.unsplash.com/premium_photo-1661645390948-1c9d4524ef76?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: "c5",
@@ -63,7 +66,8 @@ export default function Course() {
         price: "Rp. 129.000",
         lessons: 8,
         duration: "0 hr 40 min",
-        image: Banner,
+        image:
+          "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: "c6",
@@ -71,7 +75,8 @@ export default function Course() {
         price: "Rp. 299.000",
         lessons: 30,
         duration: "3 hr 20 min",
-        image: Banner,
+        image:
+          "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
     ];
   }, []);
