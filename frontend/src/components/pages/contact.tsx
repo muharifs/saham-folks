@@ -11,9 +11,8 @@ export default function Contact() {
       className="container mx-auto my-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="w-full max-w-4xl mx-auto">
-        <div className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl shadow-md p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8">
-          {/* Left column: headline / description */}
-          <div className="lg:w-1/2 flex flex-col justify-center">
+        <div className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl shadow-md p-6 sm:p-8 lg:p-10 flex flex-col gap-8">
+          <div className=" flex flex-col">
             <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-primary mb-3">
               Kontak Kami
             </h2>
@@ -23,8 +22,7 @@ export default function Contact() {
             </p>
           </div>
 
-          {/* Right column: form */}
-          <div className="lg:w-1/2">
+          <div className="">
             <Field>
               <form className="grid w-full gap-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
