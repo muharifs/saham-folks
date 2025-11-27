@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { Video, Notebook, Newspaper } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
 import Logo from "@/assets/logo1.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -20,10 +18,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuPortal,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
@@ -115,48 +109,23 @@ export default function Header() {
                   <Link to="/about">Tentang Kami</Link>
                 </h4>
               </DropdownMenuItem>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                    Program
-                  </h4>
-                </DropdownMenuSubTrigger>
-                <DropdownMenuPortal>
-                  <DropdownMenuSubContent>
-                    <DropdownMenuItem>
-                      <Video className="text-primary" />
-                      <Link to="/course">Online Course</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Notebook />
-                      Botcamp
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>More...</DropdownMenuItem>
-                  </DropdownMenuSubContent>
-                </DropdownMenuPortal>
-              </DropdownMenuSub>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <Link to="/course">Kelas</Link>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <Link to={{ pathname: "/", hash: "#comunity" }}>
                     Komunitas
-                  </h4>
-                </DropdownMenuSubTrigger>
-                <DropdownMenuPortal>
-                  <DropdownMenuSubContent>
-                    <DropdownMenuItem>
-                      <FaDiscord />
-                      <Link to={{ pathname: "/", hash: "#comunity" }}>
-                        Saham Folks Discord
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Newspaper />
-                      <Link to="/blog">Blog</Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuSubContent>
-                </DropdownMenuPortal>
-              </DropdownMenuSub>
+                  </Link>
+                </h4>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <Link to="/blog">Blog</Link>
+                </h4>
+              </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   <Link to="/contact">Kontak</Link>
