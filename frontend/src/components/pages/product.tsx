@@ -171,7 +171,7 @@ export default function Course() {
                 className="my-5 border border-primary rounded-md"
               >
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="border-primary border-b rounded-none px-4 py-3">
+                  <AccordionTrigger className="border-primary border-b rounded-none lg:px-4 lg:py-3">
                     <div className="flex flex-row">
                       <div>
                         <div className="mx-5 bg-primary text-white rounded-full p-3 flex items-center justify-center">
@@ -182,24 +182,24 @@ export default function Course() {
                         <label className="text-lg font-semibold">
                           Pengenalan Portofolio
                         </label>
-                        <div className="flex items-center gap-5 text-muted-foreground">
+                        <div className="flex items-center gap-2 lg:gap-5 text-muted-foreground">
                           <div className="flex items-center gap-2 ">
                             <FaFileAlt className="w-4 h-4 text-muted-foreground" />
                             3 Courses
                           </div>
                           <div className="flex items-center gap-2">
                             <FaRegPlayCircle className="w-4 h-4 text-muted-foreground" />
-                            12m
+                            122 menit
                           </div>
                           <div className="flex items-center gap-2">
                             <PiMonitorPlayBold className="w-4 h-4 text-muted-foreground" />
-                            Video
+                            9 Video
                           </div>
                         </div>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className=" px-10 py-7 mb-5">
+                  <AccordionContent className="px-5 py-4 lg:px-10 lg:py-7 lg:mb-5">
                     <label className="my-3 text-md font-semibold">
                       Ringkasan
                     </label>
