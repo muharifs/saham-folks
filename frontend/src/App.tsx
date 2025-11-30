@@ -12,6 +12,7 @@ import SignupPage from "./components/pages/register.tsx";
 import LoginPage from "./components/pages/login-form.tsx";
 import BlogPage from "./components/pages/blog.tsx";
 import DetailBlog from "./components/pages/blog-detail.tsx";
+import AllBlog from "./components/pages/blog-view.tsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/detail-blog" element={<DetailBlog />} />
+          <Route path="/blog/all" element={<AllBlog />} />
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/auth/register" element={<SignupPage />} />

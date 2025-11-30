@@ -1,3 +1,5 @@
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardDescription,
@@ -141,6 +143,8 @@ function ListArticle({ cardClass = "border", headerClass = "flex" }) {
 }
 
 export default function BlogPage() {
+  const navigate = useNavigate();
+  const go = () => navigate("/blog/all");
   return (
     <>
       <section
@@ -183,6 +187,7 @@ export default function BlogPage() {
                 <Button
                   variant="outline"
                   className="w-32 mb-5 text-accent-foreground"
+                  onClick={go}
                 >
                   Lihat Semua
                 </Button>
@@ -218,6 +223,7 @@ export default function BlogPage() {
                 <Button
                   variant="outline"
                   className="w-32 mb-5 text-accent-foreground"
+                  onClick={go}
                 >
                   Lihat Semua
                 </Button>
