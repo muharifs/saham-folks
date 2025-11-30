@@ -68,7 +68,7 @@ export default function About() {
                   100
                 </h2>
                 <p className="leading-4 [&:not(:first-child)] text-muted-foreground text-sm">
-                  Jam Pembelajaran
+                  Materi Pembelajaran
                 </p>
               </div>
               <div className="bg-muted-foreground/10 rounded-lg p-5">
