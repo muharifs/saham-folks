@@ -13,7 +13,7 @@ export default function BlogDetailPage() {
             <h4 className="scroll-m-20 text-sm font-semibold tracking-tight text-destructive">
               WEBVIEW
             </h4>
-            <h1 className="scroll-m-20 text-left text-4xl font-extrabold tracking-tight text-balance">
+            <h1 className="scroll-m-20 text-left text-4xl font-extrabold tracking-tight text-balance lg:text-pretty lg:pt-3">
               Taxing Laughter: The Joke Tax Chronicles and Its Impact on Comedy
               as an Art Form
             </h1>
