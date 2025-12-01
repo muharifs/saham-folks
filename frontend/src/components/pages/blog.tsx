@@ -85,13 +85,20 @@ const posts: Post[] = [
 ];
 
 function HeroArticle({ post }: { post: Post }) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/blog/${post.id}`);
+  };
   return (
     <>
-      <div className="relative w-full">
+      <div
+        className="relative w-full overflow-hidden rounded-lg"
+        onClick={handleClick}
+      >
         {/* Bagian Gambar Utama */}
         <img
           src={post.image}
-          className="rounded-md object-cover w-full lg:h-145"
+          className="rounded-md object-cover w-full lg:h-145 h-auto transform transition-all duration-500 ease-out filter hover:scale-105 hover:brightness-90 cursor-pointer"
         />
 
         {/* Overlay */}
@@ -108,7 +115,7 @@ function HeroArticle({ post }: { post: Post }) {
           <div className="flex items-center gap-3">
             <img
               src={post.avatar}
-              className="w-8 h-8 rounded-full object-cover"
+              className="w-8 h-8 rounded-full object-cover "
             />
             <div className="flex flex-row gap-5 items-center">
               <span className="text-base font-medium">{post.author}</span>
@@ -121,18 +128,30 @@ function HeroArticle({ post }: { post: Post }) {
   );
 }
 
-function ListArticle({ cardClass = "border", headerClass = "flex" }) {
+function ListArticle({
+  cardClass = "border py-5 cursor-pointer hover:shadow-lg hover:text-primary ",
+  headerClass = "flex gap-3",
+}) {
+  const navigate = useNavigate();
+  const go = () => navigate("/detail-blog");
   return (
     <>
       {[...posts.slice(1), ...posts.slice(1)].map((post) => (
-        <Card className={cardClass}>
+        <Card className={cardClass} onClick={go} key={post.id}>
           <CardHeader className={headerClass}>
-            <img
-              src={post.image}
-              className="rounded-md object-cover h-20 w-23"
-            />
-            <CardAction className="mx-3 self-center">
-              <CardTitle className="text-base">{post.title}</CardTitle>
+            <CardAction className="self-center basis-1/3">
+              <img
+                src={post.image}
+                className="rounded-md object-cover h-20 w-25 xl:w-full"
+              />
+            </CardAction>
+            <CardAction className="self-center basis-2/3">
+              <CardTitle className="text-xs bg-primary/60 px-3 py-1 mb-1 rounded-sm w-fit text-primary-foreground ">
+                {post.category}
+              </CardTitle>
+              <CardTitle className="text-base leading-5">
+                {post.title}
+              </CardTitle>
               <CardDescription className="text-sm">{post.date}</CardDescription>
             </CardAction>
           </CardHeader>
@@ -158,11 +177,15 @@ export default function BlogPage() {
           {/* 4 Gambar Lain */}
           <div className="lg:basis-1/2 grid grid-cols-2 gap-4">
             {posts.slice(1, 6).map((post) => (
-              <div className="relative w-full">
+              <div
+                className="relative w-full overflow-hidden rounded-lg"
+                key={post.id}
+              >
                 {/* Bagian Gambar Utama */}
                 <img
                   src={post.image}
-                  className="rounded-md object-cover w-full h-40 md:h-56 lg:h-70"
+                  className="rounded-md object-cover w-full md:h-56 lg:h-70 h-auto transform transition-all duration-500 ease-out filter hover:scale-105 hover:brightness-90 cursor-pointer"
+                  onClick={() => navigate(`/blog/${post.id}`)}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-4 text-white       pointer-events-none rounded-md lg:p-7">
@@ -186,7 +209,7 @@ export default function BlogPage() {
                 Popular Artikel
                 <Button
                   variant="outline"
-                  className="w-32 mb-5 text-accent-foreground"
+                  className="w-32 mb-5 text-secondary-foreground"
                   onClick={go}
                 >
                   Lihat Semua
@@ -222,7 +245,7 @@ export default function BlogPage() {
                 Artikel Terbaru
                 <Button
                   variant="outline"
-                  className="w-32 mb-5 text-accent-foreground"
+                  className="w-32 mb-5 text-secondary-foreground"
                   onClick={go}
                 >
                   Lihat Semua
@@ -263,8 +286,8 @@ export default function BlogPage() {
               </h3>
               <div className="flex flex-col">
                 <ListArticle
-                  cardClass="rounded-none shadow-none border-none py-2"
-                  headerClass="flex px-1"
+                  cardClass="rounded-none shadow-none border-none py-2 cursor-pointer hover:text-primary"
+                  headerClass="flex px-1 gap-3"
                 />
               </div>
             </div>

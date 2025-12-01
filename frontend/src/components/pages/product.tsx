@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { FaCheck, FaFileAlt, FaRegPlayCircle, FaLock } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { PiMonitorPlayBold } from "react-icons/pi";
+import LogoQris from "@/assets/qris logo.png";
 
 import {
   Card,
@@ -171,7 +171,7 @@ export default function Course() {
                 className="my-5 border border-primary rounded-md"
               >
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="border-primary border-b rounded-none lg:px-4 lg:py-3">
+                  <AccordionTrigger className="border-primary border-b rounded-none lg:px-4 lg:py-3 cursor-pointer">
                     <div className="flex flex-row">
                       <div>
                         <div className="mx-5 bg-primary text-white rounded-full p-3 flex items-center justify-center">
@@ -209,26 +209,23 @@ export default function Course() {
                         max={160}
                       />
                     </div>
-                    <div className="flex flex-col my-3">
-                      <label className="text-md font-semibold">Topik</label>
-                      <div className="flex my-2">
-                        <label className="bg-sidebar-ring h-5 rounded-full text-sm px-3 mr-2 text-muted">
-                          Trading
-                        </label>
-                        <label className="bg-sidebar-ring h-5 rounded-full text-sm px-3 mr-2 text-muted">
-                          Investing
-                        </label>
-                      </div>
+                    <div className="flex flex-row my-3">
+                      <label className="bg-sidebar-ring h-5 rounded-full text-sm px-3 mr-2 text-muted">
+                        Trading
+                      </label>
+                      <label className="bg-sidebar-ring h-5 rounded-full text-sm px-3 mr-2 text-muted">
+                        Investing
+                      </label>
                     </div>
                     <Accordion
                       type="single"
                       collapsible
-                      className="border border-primary rounded-lg bg-primary"
+                      className="border border-primary rounded-lg bg-primary/80"
                     >
                       {materiCourse.map((materi, idx) => {
                         return (
                           <AccordionItem key={idx} value={`item-${idx + 1}`}>
-                            <AccordionTrigger className="rounded-none text-white px-5 py-2 rounded-t-md h-10">
+                            <AccordionTrigger className="rounded-none text-muted px-5 py-2 rounded-t-md h-10 cursor-pointer ">
                               {materi.title}
                             </AccordionTrigger>
                             <AccordionContent className="px-3 py-3 bg-background">
@@ -282,43 +279,26 @@ export default function Course() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <RadioGroup defaultValue="option-one">
-                  <div className="flex items-center space-x-2 rounded-xl border px-4 py-2">
-                    <RadioGroupItem value="option-one" id="option-one" />
-                    <div className="flex flex-col">
-                      <Label htmlFor="option-one" className="text-md">
-                        Rp.199.000
-                        <span className="text-muted-foreground text-sm">
-                          / Bulan
-                        </span>
-                      </Label>
-                      <Label
-                        htmlFor="option-two"
-                        className="text-sm text-muted-foreground"
-                      >
-                        Lorem ipsum dolor sit amet.
-                      </Label>
-                    </div>
+                <div className="flex items-center space-x-2 rounded-xl border px-4 py-2 h-22">
+                  <div className="flex flex-col px-2">
+                    <Label htmlFor="option-one" className="text-2xl">
+                      Rp.199.000
+                      <span className="text-muted-foreground text-sm line-through">
+                        Rp.250.000
+                      </span>
+                    </Label>
+                    <Label
+                      htmlFor="option-two"
+                      className="text-sm text-muted-foreground"
+                    >
+                      Lorem ipsum dolor sit amet.
+                    </Label>
                   </div>
-                  <div className="flex items-center space-x-2 rounded-xl border px-4 py-2">
-                    <RadioGroupItem value="option-two" id="option-two" />
-                    <div className="flex flex-col">
-                      <Label htmlFor="option-two" className="text-md">
-                        Rp.300.000
-                      </Label>
-                      <Label
-                        htmlFor="option-two"
-                        className="text-sm text-muted-foreground"
-                      >
-                        Lorem ipsum dolor sit amet.
-                      </Label>
-                    </div>
-                  </div>
-                </RadioGroup>
+                </div>
                 <div className="flex items-center my-3">
                   <div className="h-px flex-grow bg-primary"></div>
                   <span className="mx-3 text-sm text-muted-foreground">
-                    Metode Pembayaran
+                    <img className="w-15" src={LogoQris} alt="" />
                   </span>
                   <div className="h-px flex-grow bg-primary"></div>
                 </div>

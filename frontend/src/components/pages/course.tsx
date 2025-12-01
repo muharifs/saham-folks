@@ -168,7 +168,10 @@ function CourseCard({
           <div className="text-primary">{course.price}</div>
         </CardDescription>
         <CardTitle>
-          <h3 className="scroll-m-20 text-lg md:text-2xl font-semibold tracking-tight text-accent-foreground">
+          <h3
+            className="scroll-m-20 text-lg md:text-2xl font-semibold tracking-tight text-accent-foreground hover:text-primary cursor-pointer"
+            onClick={go}
+          >
             {course.title}
           </h3>
         </CardTitle>

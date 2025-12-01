@@ -40,11 +40,11 @@ function NavigationMenuDemo() {
             <Link to="/course">Kelas</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link to={{ pathname: "/", hash: "#comunity" }}>Komunitas</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link to="/blog">Blog</Link>
@@ -114,13 +114,13 @@ export default function Header() {
                   <Link to="/course">Kelas</Link>
                 </h4>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
+              {/* <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   <Link to={{ pathname: "/", hash: "#comunity" }}>
                     Komunitas
                   </Link>
                 </h4>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
               <DropdownMenuItem asChild>
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   <Link to="/blog">Blog</Link>
